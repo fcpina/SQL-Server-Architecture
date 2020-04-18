@@ -26,6 +26,42 @@
 		1. Phase 0: Search for Trivial Plans.
 		2. Phase 1: Search for Transaction processing plans.
 		3. Phase 2: Parallel Processing and Optimization.
+		Eg:
+		SELECT *
+		INTO after_query_optimizer_info
+		FROM sys.dm_exec_query_optimizer_info
+		GO
+		SELECT *
+		INTO before_query_optimizer_info
+		FROM sys.dm_exec_query_optimizer_info
+		GO
+		DROP TABLE before_query_optimizer_info
+		DROP TABLE after_query_optimizer_info
+		GO
+		-- real execution starts
+		GO
+		SELECT *
+		INTO before_query_optimizer_info
+		FROM sys.dm_exec_query_optimizer_info
+		GO
+		
+		-- INSERT YOUR QUERY HERE:
+		SELECT * FROM ...
+
+		SELECT *
+		INTO after_query_optimizer_info
+		FROM sys.dm_exec_query_optimizer_info
+		GO
+		SELECT a.counter,
+		(a.occurrence - b.occurrence) AS occurrence,
+		 (a.occurrence * a.value - b.occurrence *
+		 b.value) AS value
+		FROM before_query_optimizer_info b
+		 JOIN after_query_optimizer_info a
+		 ON b.counter = a.counter
+		WHERE b.occurrence <> a.occurrence
+		DROP TABLE before_query_optimizer_info
+		DROP TABLE after_query_optimizer_info
 
 
 	Query Executor: 
