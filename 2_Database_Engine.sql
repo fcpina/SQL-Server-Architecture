@@ -26,6 +26,7 @@
 		1. Phase 0: Search for Trivial Plans.
 		2. Phase 1: Search for Transaction processing plans.
 		3. Phase 2: Parallel Processing and Optimization.
+*/
 		Eg:
 		SELECT *
 		INTO after_query_optimizer_info
@@ -62,8 +63,7 @@
 		WHERE b.occurrence <> a.occurrence
 		DROP TABLE before_query_optimizer_info
 		DROP TABLE after_query_optimizer_info
-
-
+/*
 	Query Executor: 
 	Query executer calls Access Method. It provides an execution plan for data fetching logic required for execution. 
 	Once data is received from Storage Engine, the result gets published to the Protocol layer. 
