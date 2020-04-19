@@ -26,10 +26,10 @@
 		4. Group binding - Binds any aggreations to the appropriate select list
 
 	
-	Optimizer: 
-	Optimization is done for DML (Data Modification Language) commands like SELECT, INSERT, DELETE, and UPDATE. 
-	The work of the optimizer is to create an execution plan for the user's query. 
-	This is the plan that will determine how the user query will be executed.
+	Query Optimization:
+	The job of the Query Optimizer is to take the query tree that was output from the algebrizer and find a GOOD way to retrieve 
+	the data(Results) needed.
+	 
 
 		
 	Query Executor: 
@@ -37,5 +37,5 @@
 	Once data is received from Storage Engine, the result gets published to the Protocol layer. 
 	Finally, data is sent to the end user.
 
-
+*/
 	
