@@ -8,7 +8,7 @@
 	-- Query optimizer examples:
 	
 	DBCC TRACEON(3604) -- Trace flag 3604 to redirect the trace output to the client executing the command, 
-			      in this case to the Messages tab in SQL Server Management Studio. 
+			   -- in this case to the Messages tab in SQL Server Management Studio. 
 	
 	-- Trivial plan:
 	SELECT BusinessEntityID,
