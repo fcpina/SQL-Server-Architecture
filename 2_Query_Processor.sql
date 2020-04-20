@@ -59,10 +59,11 @@
 	Download: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15
 	
 	After run each query, check the MESSAGE TAB on Microsft SQL Server Studio
+	
 	*/
 	
 	
-	Query optimizer examples:
+	-- Query optimizer examples:
 	
 	-- Trivial plan:
 	SELECT BusinessEntityID,
