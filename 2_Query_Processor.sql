@@ -1,12 +1,11 @@
 	/*	
 	
-	**Database**: AdventureWork2012
-	**Download**: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15
-	### After running each query, check the MESSAGE TAB on Microsft SQL Server Studio
+	Database: AdventureWork2012
+	Download: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-ver15
+	After running each query, check the MESSAGE TAB on Microsft SQL Server Studio
 	
 	*/
 	-- Query optimizer examples:
-	
 	-- Trivial plan:
 	SELECT BusinessEntityID,
 	       PersonType ModifiedDate
